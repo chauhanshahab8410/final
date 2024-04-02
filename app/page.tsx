@@ -1,141 +1,117 @@
+// import React from 'react';
+// import "./login.css"
 
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
-import { Overview } from './components/overview'
-import { RecentSales } from './components/recent-sales'
+// export default function Home() {
+//     const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+//         event.preventDefault(); // Prevent form submission
 
+        
+//         // const usernameInput = event.currentTarget.elements.namedItem('username') as HTMLInputElement;
+//         // const passwordInput = event.currentTarget.elements.namedItem('password') as HTMLInputElement;
+        
+//         // const username = usernameInput ? usernameInput.value : '';
+//         // const password = passwordInput ? passwordInput.value : '';
+        
+//         // // Now you can use username and password for further processing
+//         // console.log('Username:', username);
+//         // console.log('Password:', password);
+//         window.location.href = '/dashboard';
+        
+//         // You can also submit the form programmatically if needed
+//         // event.currentTarget.submit();
+//     };
+
+//     return (
+//         <div>
+//             <section>
+//                 <div className="color"></div>
+//                 <div className="color"></div>
+//                 <div className="color"></div>
+//                 <div className="box">
+//                     <div className="square" style={{ "--i": 0 }}></div>
+//                     <div className="square" style={{ "--i": 1 }}></div>
+//                     <div className="square" style={{ "--i": 2 }}></div>
+//                     <div className="square" style={{ "--i": 3 }}></div>
+//                     <div className="square" style={{ "--i": 4 }}></div>
+//                     <div className="container">
+//                         <div className="form">
+//                             <h2>Login Form</h2>
+//                             <form id="form" onSubmit={handleSubmit}>
+//                                 <div className="inputBox">
+//                                     <input type="text" name="username" placeholder="Username" required />
+//                                 </div>
+//                                 <div className="inputBox">
+//                                     <input type="password" name="password" placeholder="Password" required />
+//                                 </div>
+//                                 <div className="inputBox">
+//                                     <input type="submit" value="Login" href="/"/>
+//                                 </div>
+//                                 <p className="forget">
+//                                     Forget Password ? <a href="#">Click Here</a>
+//                                 </p>
+//                                 <p className="forget">
+//                                     Don't have an account ? <a href="#">Sign up</a>
+//                                 </p>
+//                             </form>
+//                         </div>
+//                     </div>
+//                 </div>
+//             </section>
+//         </div>
+//     );
+// }
+
+
+
+
+
+
+import React from "react";
+import "./login.css"
 export default function Home() {
   return (
-    <>
-       <h2 className="text-3xl font-bold tracking-tight my-4">Dashboard</h2>
-       
-
-      <div className="flex-1 space-y-4">
-        <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
-          <Card>
-            <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-              <CardTitle className="text-sm font-medium">
-                Total Revenue
-              </CardTitle>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                className="h-4 w-4 text-muted-foreground"
-              >
-                <path d="M11 3a9 9 0 0 1 9 9c0 5.134-4.168 9.271-9 9.271v-2.271a7 7 0 1 0 0-14V3z"/>
-              </svg>
-            </CardHeader>
-            <CardContent>
-              <div className="text-2xl font-bold">₹45,231.89</div>
-              <p className="text-xs text-muted-foreground">
-                +20.1% from last month
-              </p>
-            </CardContent>
-          </Card>
-
-          <Card>
-            <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-              <CardTitle className="text-sm font-medium">
-                Subscriptions
-              </CardTitle>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                className="h-4 w-4 text-muted-foreground"
-              >
-                <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
-                <circle cx="9" cy="7" r="4" />
-                <path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75" />
-              </svg>
-            </CardHeader>
-            <CardContent>
-              <div className="text-2xl font-bold">+2350</div>
-              <p className="text-xs text-muted-foreground">
-                +180.1% from last month
-              </p>
-            </CardContent>
-          </Card>
-          <Card>
-            <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-              <CardTitle className="text-sm font-medium">Sales</CardTitle>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                className="h-4 w-4 text-muted-foreground"
-              >
-                <rect width="20" height="14" x="2" y="5" rx="2" />
-                <path d="M2 10h20" />
-              </svg>
-            </CardHeader>
-            <CardContent>
-              <div className="text-2xl font-bold">+12,234</div>
-              <p className="text-xs text-muted-foreground">
-                +19% from last month
-              </p>
-            </CardContent>
-          </Card>
-          <Card>
-            <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-              <CardTitle className="text-sm font-medium">
-                Active Now
-              </CardTitle>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                className="h-4 w-4 text-muted-foreground"
-              >
-                <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
-              </svg>
-            </CardHeader>
-            <CardContent>
-              <div className="text-2xl font-bold">+573</div>
-              <p className="text-xs text-muted-foreground">
-                +201 since last hour
-              </p>
-            </CardContent>
-          </Card>
+    <div>
+    <section>
+        <div className="color"></div>
+        <div className="color"></div>
+        <div className="color"></div>
+        <div className="box">
+          <div className="square" style={{ "--i": 0 }}></div>
+          <div className="square" style={{ "--i": 1 }}></div>
+          <div className="square" style={{ "--i": 2 }}></div>
+          <div className="square" style={{ "--i": 3 }}></div>
+          <div className="square" style={{ "--i": 4 }}></div>
+          <div className="container">
+            <div className="form">
+              <h2>Login Form</h2>
+              <form id="form"action = "./validation ">
+                <div className="inputBox">
+                  <input type="text" placeholder="username" required />
+                </div>
+                <div className="inputBox">
+                  <input type="password" name="username" placeholder="password" required/>
+                </div>
+                <div className="inputBox">
+                  <input type="submit" name="password"value="Login" />
+                </div>
+                <p className="forget">
+                  Forget Password ? <a href="#">Click Here</a>
+                </p>
+                <p className="forget">
+                  Don't have an account ? <a href="#">Sign up</a>
+                </p>
+              </form>
+            </div>
+          </div>
         </div>
-        <div className="grid gap-4 sm:grid-cols-1 lg:grid-cols-7">
-          <Card className="lg:col-span-4">
-            <CardHeader>
-              <CardTitle>Overview</CardTitle>
-            </CardHeader>
-            <CardContent className="pl-2">
-              <Overview />
-            </CardContent>
-          </Card>
-          <Card className="lg:col-span-3">
-            <CardHeader>
-              <CardTitle>Recent Sales</CardTitle>
-              <CardDescription>
-                You made 265 sales this month.
-              </CardDescription>
-            </CardHeader>
-            <CardContent>
-              <RecentSales />
-            </CardContent>
-          </Card>
-        </div>
-      </div>
-    </>
-  )
-}
+      </section>
+    </div>
+    
+
+  );
+ 
+};
+
+
+
+    
