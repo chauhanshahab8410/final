@@ -20,8 +20,8 @@
 // console.log('Encrypted:', encryptedData);
 // console.log('Decrypted:', decryptedData);
 
-
-import pool from 'C:/Users/princ/OneDrive/Desktop/test/admindashbord/db/db';
+// C:/Users/princ/OneDrive/Desktop/test/admindashbord/db/db
+import pool from '../../../db/db';
 import { NextResponse } from 'next/server';
 
 export async function GET(request: Request) {
